@@ -1,5 +1,5 @@
-\c docker_database_1
-CREATE TABLE public.test(
+\c docker_database_1 			// Zeggen welke database er moet gebruikt worden
+CREATE TABLE public.Varianten(
     id int PRIMARY KEY,
     name varchar(255),
     lastName varchar(255)

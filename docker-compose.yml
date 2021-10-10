@@ -1,20 +1,14 @@
-  volumes:
-    - ./:/app
 version: '3'
-	
 services:
-  database:							
+  database:
     image: "postgres"
-    restart: always
-    ports:							
+    ports:
       - '5432:5432'
     environment:
       POSTGRES_PASSWORD: YSejapt
-      POSTGRES_USER: youri					
+      POSTGRES_USER: youri
       POSTGRES_DB: docker_database_1
-    volumes:							
-      - ./set.sql:/docker-entrypoint-initdb.d/set.sql 
+    volumes:
+      - ./set.sql:/docker-entrypoint-initdb.d/init.sql
 
-volumes:
-  postgres_data:
 
