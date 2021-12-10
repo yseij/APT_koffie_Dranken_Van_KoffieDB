@@ -1,11 +1,9 @@
 package com.example.java.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "test")
 public class Koffie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,5 +25,13 @@ public class Koffie {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAchternaam() {
+        return achternaam;
+    }
+
+    public void setAchternaam(String achternaam) {
+        this.achternaam = achternaam;
     }
 }
